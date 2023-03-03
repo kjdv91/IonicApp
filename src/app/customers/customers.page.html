@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar color="mycolor">
+    <ion-buttons slot="start"
+
+    color="primary"
+    mode="ios"
+    >
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>customers</ion-title>
+  </ion-toolbar>
+  <ion-toolbar>
+    <ion-searchbar placeholder="buscar" animated (ionChange) ="searchCustomer($event)">
+
+    </ion-searchbar>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list *ngIf="permisions">
+    <ion-item>
+      <ion-avatar slot="start">
+
+      </ion-avatar>
+      <ion-label>
+        <h2>Bored Ape 720</h2>
+        <h3>zx21czxczx2c12zcx1czx</h3>
+        <p>jhkajhkfajhkasjhkl;afskl;as</p>
+
+      </ion-label>
+    </ion-item>
+    <ion-item *ngFor="let user of searchCust">
+      <ion-label>{{user.name}}</ion-label>
+
+    </ion-item>
+
+
+    <ion-item>
+      <ion-label>Super Mario World</ion-label>
+    </ion-item>
+  </ion-list>
+  <label *ngIf="!permisions">No tienes permisos</label>
+
+</ion-content>

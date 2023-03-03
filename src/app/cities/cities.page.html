@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar color="mycolor">
+    <ion-buttons slot="start"
+
+    color="primary"
+    mode="ios"
+    >
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>cities</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-row >
+    <ion-col sizeLg="6" sizeMd="6" sizeXs="12" *ngFor="let city of cities" >
+      <ion-card [routerLink]="['/city',city.id]">
+        <img src="../../assets/images/{{city.image}}">
+        <div class="card-title">{{city.name}}</div>
+
+      </ion-card>
+
+    </ion-col>
+
+  </ion-row>
+  <button (click)="goHome()">
+    Regrea al inicio
+  </button>
+
+</ion-content>

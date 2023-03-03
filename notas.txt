@@ -1,0 +1,7 @@
+ionic start essential blank
+ionic serve -o
+ionic serve --lab = ver en android y ios
+ionic g page pages/home  --dry-run == me dice los archivos que se van a crear
+ionic g page pages/home  --spec=false  excluyo el archivo de pruebas
+ionic g m components/utils
+
